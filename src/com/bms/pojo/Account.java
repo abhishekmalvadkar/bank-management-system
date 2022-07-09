@@ -14,6 +14,9 @@ public class Account {
 		this.isActive = isActive;
 	}
 
+	public Account() {
+	}
+
 	public String getAccountNumber() {
 		return accountNumber;
 	}
