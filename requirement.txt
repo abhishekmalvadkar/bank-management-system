@@ -1,0 +1,63 @@
+* Bank Management System
+
+- As a user, I should able to create my account
+- As a user, I should able to deposite money in my account
+- As a user, I should able to withdrawal from my my account
+- As a user, I should able to deactive my account
+- As a user, I should able to update my account deatils
+
+* Nouns
+- User
+- Account
+- Money
+
+* MVC PATTERN
+- Model = database talk class = AccountDAO => will talk to database(static list varaible)
+- View = UI part => Main method class 
+- Controller = Request part => NA
+
+* Single Responsibility Principle
+
+* Main class
+	* main()
+		
+* Account class (Domain/Data class)
+* AccountDAO class(To talk with database only) with static list variable
+	- createAccount
+	- depositeMoney
+	- withdrawalMoney
+	- updateAccountDetails
+	- deactiveAccount
+
+* AccountService class (For logic/calculation/process)
+	- createAccount
+	- depositeMoney
+	- withdrawalMoney
+	- updateAccountDetails
+	- deactiveAccount
+
+
+* Actions
+- createAccount
+- depositeMoney
+- withdrawalMoney
+- updateAccountDetails
+- deactiveAccount
+
+* Database
+- single copy which will be shared by everyone - static variable list of account - private static Set<Account> accounts = new HashSet<>();
+
+* Classes
+
+1. Account
+- accountNumber : String 
+- accountBalance : Double
+- userName : String
+- isActive : Boolean
+
+* Functions
+1. createAccount(Account account)
+2. depositeMoney(Double depositelbalanace , String accountNumber)
+	- get the account by accountNumber => Account object
+	- deduct the balance from got account object balance
+	
